@@ -6,8 +6,8 @@ import * as actions from "../../store/actions";
 
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-// import { userService } from '../../services/userService';
-//import { handleLoginApi } from '../../services/userService';
+//import { userService } from '../../services/userService';
+import { handleLoginApi } from '../../services/userService';
 
 
 class Login extends Component {
@@ -41,17 +41,16 @@ class Login extends Component {
             errMessage: ''
         })
         try {
-
-            //let data = await handleLoginApi(this.state.username, this.state.password);
-            // if (data && data.errCode !== 0) {
-            //     this.setState({
-            //         errMessage: data.message
-            //     })
-            // }
-            // if (data && data.errCode === 0) {
-            //     this.props.userLoginSuccess(data.user);
-            //     console.log('loging success');
-            // }
+            let data = await handleLoginApi(this.state.username, this.state.password);
+            if (data && data.errCode !== 0) {
+                this.setState({
+                    errMessage: data.message
+                })
+            }
+            if (data && data.errCode === 0) {
+                this.props.userLoginSuccess(data.user);
+                console.log('loging success');
+            }
 
         } catch (e) {
             if (e.response) {
@@ -61,7 +60,7 @@ class Login extends Component {
                     })
                 }
             }
-            console.log('error message', e.response);
+            console.log('error message', e);
         }
     }
 
@@ -146,8 +145,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
-        // userLoginFail: () => dispatch(actions.adminLoginFail()),
-        //userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo))
+       // userLoginFail: () => dispatch(actions.adminLoginFail()),
+        userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo))
     };
 
 
