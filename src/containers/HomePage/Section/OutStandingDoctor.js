@@ -7,19 +7,31 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import * as actions from '../../../store/actions';
+import { LANGUAGES } from '../../../utils';
 class OutStandingDoctor extends Component {
-
-   
+    constructor(props){
+        super(props)
+        this.state = {
+            arrDoctors:[]
+        }
+    }
+   componentDidUpdate(prevProps,prevState,snapshot){
+    if(prevProps.topDoctorRedux !== this.props.topDoctorRedux){
+        this.setState({
+            arrDoctors: this.props.topDoctorRedux
+        })
+    }
+   }
+   componentDidMount(){
+    this.props.loadTopDoctors();
+   }
 
     render() {
-        let settings = {
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1
-        };
-        
+        let arrDoctors = this.state.arrDoctors;
+        let {language}= this.props;
+        arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
+        console.log('channel: ', arrDoctors)
         return (
             
             <div className='section-share section-outstanding-doctor'>
@@ -30,84 +42,32 @@ class OutStandingDoctor extends Component {
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
+                        {arrDoctors && arrDoctors.length >0 
+                        && arrDoctors.map((item,index)=>{
+                            let imageBase64 = '';
+                            if(item.image){
+                                imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                            }
+                            let nameEn = `${item.poshitionData.valueEn}, ${item.lastName}  ${item.firstName}`;
+                            let nameVi = `${item.poshitionData.valueVi}, ${item.lastName}  ${item.firstName}`;
+                            return(
                             <div className='section-customize '>
                                 <div className='customize-border'>
                                     <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
+                                        <div className='bg-image section-outstanding-doctor'
+                                                style={{backgroundImage: `url(${imageBase64})`}}
+                                        />
                                     </div>
                                     <div className='position text-center'>
-                                        <div> Name 1</div>
+                                        <div> {language == LANGUAGES.EN ? nameEn : nameVi}</div>
                                         <div> something 1</div>
                                     </div>
                                 </div>
                             </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 2</div>
-                                        <div> something 2</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 3</div>
-                                        <div> something 3</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 4</div>
-                                        <div> something 4</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 5</div>
-                                        <div> something 5</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 6</div>
-                                        <div> something </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='section-customize '>
-                                <div className='customize-border'>
-                                    <div className='outer-bg'>
-                                        <div className='bg-image section-outstanding-doctor'/>
-                                    </div>
-                                    <div className='position text-center'>
-                                        <div> Name 1</div>
-                                        <div> something 1</div>
-                                    </div>
-                                </div>
-                            </div>
-                    
+                        )
+                        })
+                           
+                        }
                         </Slider>
                     </div>
                 </div>
@@ -119,6 +79,7 @@ class OutStandingDoctor extends Component {
 
 const mapStateToProps = state => {
     return {
+        topDoctorRedux: state.admin.topDoctors,
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
     };
@@ -126,6 +87,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        loadTopDoctors: () => dispatch(actions.fetchTopDoctor())
+
     };
 };
 

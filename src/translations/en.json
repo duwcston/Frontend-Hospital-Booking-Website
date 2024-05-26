@@ -59,7 +59,8 @@
         "position": "Position",
         "role": "Role",
         "save": "Save user",
-        "image": "Image"
+        "image": "Avatar",
+        "edit": "Edit user"
     },
     "menu": {
         "admin": {
