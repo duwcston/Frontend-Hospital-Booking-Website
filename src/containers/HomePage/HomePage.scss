@@ -30,11 +30,14 @@
     }
 }
 
+.slick-disabled{
+    display: none !important;
+}
 .section-share{
     &.section-specialty{
         background: white;
     }
-    &.seection-outstanding-doctor{
+    &.section-outstanding-doctor{
         background: white;
     }
 
@@ -129,6 +132,7 @@
 
         .section-customize{
             padding: 5px;
+            cursor: pointer;
 
             .customize-border{
                 border: 1px solid orange;

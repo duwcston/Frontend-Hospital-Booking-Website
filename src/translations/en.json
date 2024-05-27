@@ -12,7 +12,7 @@
         "welcome": "Welcome"
     },
     "banner":{
-        "title1":"MEDICAL BACKGROUND",
+        "title1":"MEDICAL PLATFORM",
         "title2":"COMPRESENSIVE HEALTH CAR",
         "child1":"Specialized examination",
         "child2":"Romote examination",
@@ -20,6 +20,10 @@
         "child4":"Medical test",
         "child5":"Mental health",
         "child6":"Dental examination"
+    },
+    "homepage":{
+        "out-standing-doctor":"Last week's featured docotr",
+        "more-infor":"More infor"
     },
     "common": {
         "add": "Add",

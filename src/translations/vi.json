@@ -11,7 +11,7 @@
         "support":"Support"
     },
     "banner":{
-        "title1":"MEDICAL BACKGROUND",
+        "title1":"MEDICAL PLATFORM",
         "title2":"COMPRESENSIVE HEALTH CAR",
         "child1":"Specialized examination",
         "child2":"Romote examination",
@@ -35,6 +35,10 @@
         "save": "Save user",
         "image": "Avatar",
         "edit": "Edit user"
+    },
+    "homepage":{
+        "out-standing-doctor":"Last week's featured docotr",
+        "more-infor":"More infor"
     },
     "menu": {
         
