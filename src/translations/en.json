@@ -161,5 +161,11 @@
             "remove-assign-fail": "Fail to unassign service package to customer",
             "sure-delete-assign": "Are you sure to unassign service package to customer?"
         }
+    },
+    "manage-schedule":{
+        "title": "Manage doctor's examination plan",
+        "choose-doctor":"Choose Doctor",
+        "choose-date":"Choose Date",
+        "save":"Save infor"
     }
 }

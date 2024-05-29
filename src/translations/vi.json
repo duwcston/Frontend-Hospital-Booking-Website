@@ -177,5 +177,11 @@
             "remove-assign-fail": "Bỏ gán gói dịch vụ cho khách hàng thất bại",
             "sure-delete-assign": "Bạn có chắc chắn muốn bỏ gán gói dịch vụ cho khách hàng?"
         }
+    },
+    "manage-schedule":{
+        "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
+        "choose-doctor":"Chọn bác sĩ",
+        "choose-date":"Chọn ngày",
+        "save":"Lưu thông tin"
     }
 }

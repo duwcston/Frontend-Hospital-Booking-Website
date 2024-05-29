@@ -58,7 +58,12 @@ class ManageDoctor extends Component {
                 listDoctors: dataSelect
             })
         }
-        
+        if (prevPros.language !== this.props.language){
+            let dataSelect = this.buildDatainputSelect(this.props.allDoctors)
+            this.setState({
+                listDoctors: dataSelect
+            })
+        }
     }
 
     handleEditorChange = ({html, text}) => {
