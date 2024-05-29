@@ -29,7 +29,7 @@ export const YesNoObj = {
 }
 
 export const USER_ROLES = {
-    ADMIN:'2',
-    DOCTOR:'1',
-    PATIENT:'3'
+    ADMIN:'R1',
+    DOCTOR:'R2',
+    PATIENT:'R3'
 }
