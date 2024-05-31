@@ -49,9 +49,9 @@ class DoctorSchedule extends Component {
 
     handleOnChageSelect = async (event) => {
         if (this.props.doctorIdFromParent && this.props.doctorIdFromParent !==1){
-            let doctorID = this.props.doctorIdFromParent;
+            let doctorId = this.props.doctorIdFromParent;
             let date = event.target.value
-            let res = await getScheduleDoctorByDate(doctorID, date);
+            let res = await getScheduleDoctorByDate(doctorId, date);
             console.log('check res schedule from react:', res)
         }
     }
