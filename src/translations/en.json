@@ -167,5 +167,13 @@
         "choose-doctor":"Choose Doctor",
         "choose-date":"Choose Date",
         "save":"Save infor"
+    },
+    "patient":{
+        "detail-doctor":{
+            "schedule":"Schedule",
+            "no-schedule": "Doctor dont have appointment",
+            "choose": "Choose",
+            "book-free":"book (free)"
+        }
     }
 }
