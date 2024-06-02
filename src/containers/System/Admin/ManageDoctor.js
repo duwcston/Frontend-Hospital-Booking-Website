@@ -51,8 +51,8 @@ class ManageDoctor extends Component {
         if (inputData.length > 0) {
             inputData.forEach((item, index) => {
                 let object = {};
-                let labelEn = type === 'USERS' ? `${item.lastName} ${item.firstName}` : '';
-                let labelVi = type === 'USERS' ? `${item.firstName} ${item.lastName}` : '';
+                let labelEn = type === 'USERS' ? `${item.lastName} ${item.firstName}` : item.valueVi;
+                let labelVi = type === 'USERS' ? `${item.firstName} ${item.lastName}` : item.valueEn;
 
                 object.label = language === LANGUAGES.EN ? labelEn : labelVi;
                 object.value = item.id;
@@ -77,16 +77,19 @@ class ManageDoctor extends Component {
         }
 
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
+            console.log('get data from redux:', this.props.allRequiredDoctorInfor)
             let { resPayment, resPrice, resProvince } = this.props.allRequiredDoctorInfor;
 
             let dataSelectPrice = this.buildDataInputSelect(resPrice);
             let dataSelectPayment = this.buildDataInputSelect(resPayment);
             let dataSelectProvince = this.buildDataInputSelect(resProvince);
 
+            console.log('check data:',dataSelectPrice,dataSelectPayment,dataSelectProvince)
+
             this.setState({
                 listPrice: dataSelectPrice,
                 listPayment: dataSelectPayment,
-                listProvince: dataSelectProvince
+                listProvince: dataSelectProvince,
             });
         }
     }
