@@ -198,7 +198,12 @@
             "select-doctor":"Chọn bác sĩ",
             "intro":"Thông tin giới thiệu",
             "add":"Tạo thông tin",
-            "save":"Lưu thông tin"
+            "save":"Lưu thông tin",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh/ Thành Phố",
+            "nameClinic": "Tên phòng khám",
+            "addressClinic": "Địa chỉ phòng khám",
+            "note":"Ghi chú"
         }
     }
 }

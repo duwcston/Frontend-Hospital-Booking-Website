@@ -182,7 +182,13 @@
             "select-doctor":"Choose doctor",
             "intro":"doctor information",
             "add":"Create information",
-            "save":"Save Information"
+            "save":"Save Information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic": "Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note":"Note"
         }
     }
 }
