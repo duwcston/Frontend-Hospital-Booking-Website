@@ -73,7 +73,7 @@ class ManageDoctor extends Component {
                 result = inputData.map((item, index) => {
                     let object = {};
                     let labelEn = `${item.valueVi}`;
-                    let labelVi = `${item.valueEn} USD`;
+                    let labelVi = `${item.valueEn}`;
     
                     object.label = language === LANGUAGES.EN ? labelEn : labelVi;
                     object.value = item.keyMap;
@@ -139,9 +139,14 @@ class ManageDoctor extends Component {
 
     handleSaveContentMarkdown = () => {
         let { hasOldData, selectedPrice, selectedPayment, selectProvince } = this.state;
-    
+        console.log("Button clicked");
+        console.log("Selected Price:", selectedPrice);
+        console.log("Selected Payment:", selectedPayment);
+        console.log("Select Province:", selectProvince);
+
         // Check if any of the required properties are null before accessing their value property
         if (selectedPrice && selectedPayment && selectProvince) {
+            console.log("All required properties are valid");
             this.props.saveDetailDoctor({
                 contentHTML: this.state.contentHTML,
                 contentMarkdown: this.state.contentMarkdown,
@@ -149,9 +154,9 @@ class ManageDoctor extends Component {
                 doctorId: this.state.selectedOption.value,
                 action: hasOldData === true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
     
-                selectedPrice: selectedPrice.value,
-                selectedPayment: selectedPayment.value,
-                selectProvince: selectProvince.value,
+                selectedPrice: this.state.selectedPrice.value,
+                selectedPayment: this.state.selectedPayment.value,
+                selectProvince: this.state.selectProvince.value,
                 nameClinic: this.state.nameClinic,
                 addressClinic: this.state.addressClinic,
                 note: this.note,
@@ -165,22 +170,54 @@ class ManageDoctor extends Component {
 
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedOption });
+        let { listPayment,listPrice,listProvince} = this.state;
 
         let res = await getDetailInforDoctor(selectedOption.value);
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let markdown = res.data.Markdown;
+
+            let addressClinic = '', nameClinic = '', note = '',
+                paymentId = '', priceId = '', provinceId = '',
+                selectedPayment= '', selectedPrice='',selectProvince='';
+            
+            if (res.data.Doctor_Infor) {
+                addressClinic = res.data.Doctor_Infor.addressClinic;
+                nameClinic = res.data.Doctor_Infor.nameClinic;
+                note = res.data.Doctor_Infor.note;
+                paymentId = res.data.Doctor_Infor.paymentId;
+                priceId = res.data.Doctor_Infor.priceId;
+
+                selectedPayment = listPayment.find(item => {
+                    return item && item.value === paymentId
+                })
+                selectedPrice = listPrice.find (item => {
+                    return item && item.value === priceId
+                })
+                selectProvince = listProvince.find (item => {
+                    return item && item.value === provinceId
+                })
+            }
             this.setState({
                 contentHTML: markdown.contentHTML,
                 contentMarkdown: markdown.contentMarkdown,
                 description: markdown.description,
-                hasOldData: true
+                hasOldData: true,
+                addressClinic: addressClinic,
+                nameClinic : nameClinic,
+                note : note,
+                selectedPayment : selectedPayment,
+                selectedPrice : selectedPrice,
+                selectProvince : selectProvince
             });
         } else {
             this.setState({
                 contentHTML: '',
                 contentMarkdown: '',
                 description: '',
-                hasOldData: false
+                hasOldData: false,
+                addressClinic : '',
+                nameClinic: '',
+                note: ''
             });
         }
     }
@@ -198,6 +235,7 @@ class ManageDoctor extends Component {
         this.setState ({
             ...stateCopy
         })
+        console.log('check on change', selectedOption,stateName)
     }
 
     handleOnChangeText = (event,id) => {
@@ -255,8 +293,11 @@ class ManageDoctor extends Component {
                         /> */}
                         <label>Chọn phương thức thanh toán</label>
                         <Select
+                            value= {this.state.selectedPayment}
+                            onChange = {this.handleChangeSelectDoctorInfor}
                             options={this.state.listPayment}
                             placeholder={'Chọn phương thức thanh toán'}
+                            name = "selectedPayment"
                         />  
                     </div>
                     <div className="col-4 form-group">
