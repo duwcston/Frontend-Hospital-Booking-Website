@@ -1,4 +1,4 @@
-.doctor-extra-infor-container { 
+.doctor-extra-infor-container {
     padding-left: 15px;
 
     .content-up {
@@ -15,53 +15,57 @@
             color: #333;
         }
 
-        .detail-address{
+        .detail-address {
             font-weight: 600;
             color: #333;
         }
     }
 
-    .content-down{
+    .content-down {
 
-        .short-infor{
-            span{
+        .short-infor {
+            .detail {
                 cursor: pointer;
-                color: rgb(38,160,231);
+                color: rgb(38, 160, 231);
+            }
+
+            .currency {
+                margin: 0 5px;
             }
         }
 
-        .title-price{
+        .title-price {
             margin-bottom: 10px;
         }
 
-        .detail-infor{
+        .detail-infor {
             border: 1px solid #ddd;
             padding: 5px;
             background-color: #f8f8f8;
 
-            .price{
+            .price {
                 padding-bottom: 5px;
 
-                .right{
+                .right {
                     float: right;
                 }
             }
 
-            .note{}
+            .note {}
         }
 
-        .payment{
+        .payment {
             border: 1px solid #ddd;
             padding: 5px;
             background-color: #eee;
         }
 
         .hide-price {
-            margin-top : 10px;
+            margin-top: 10px;
 
-            span{
+            span {
                 cursor: pointer;
-                color: rgb(38, 160,231);
+                color: rgb(38, 160, 231);
             }
         }
     }

@@ -1,29 +1,29 @@
 {
-    "homeheader":{
-        "speciality":"Medical specialty",
-        "searchdoctor":"Find a doctoer by speciality",
-        "health-facility":"Health facilities",
-        "select-room":"Choose hospital clinic",
-        "doctor":"Doctor",
-        "select-doctor":"Choose a good doctor",
-        "fee":"Checkup package",
-        "check-health":"General health check",
-        "support":"Support",
+    "homeheader": {
+        "speciality": "Medical specialty",
+        "searchdoctor": "Find a doctoer by speciality",
+        "health-facility": "Health facilities",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support",
         "welcome": "Welcome"
     },
-    "banner":{
-        "title1":"MEDICAL PLATFORM",
-        "title2":"COMPRESENSIVE HEALTH CAR",
-        "child1":"Specialized examination",
-        "child2":"Romote examination",
-        "child3":"General examination",
-        "child4":"Medical test",
-        "child5":"Mental health",
-        "child6":"Dental examination"
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPRESENSIVE HEALTH CAR",
+        "child1": "Specialized examination",
+        "child2": "Romote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination"
     },
-    "homepage":{
-        "out-standing-doctor":"Last week's featured docotr",
-        "more-infor":"More infor"
+    "homepage": {
+        "out-standing-doctor": "Last week's featured docotr",
+        "more-infor": "More infor"
     },
     "common": {
         "add": "Add",
@@ -51,7 +51,7 @@
         "password": "Password",
         "userpass-wrong": "Invalid username or password!"
     },
-    "manage-user":{
+    "manage-user": {
         "add": "Add a new user",
         "email": "Email",
         "password": "Password",
@@ -80,8 +80,8 @@
             "handbook": "Handbook",
             "manage-handbook": "Manage handbook"
         },
-        "doctor":{
-            "manage-schedule":"Manage Doctor's schedule"
+        "doctor": {
+            "manage-schedule": "Manage Doctor's schedule"
         }
     },
     "system": {
@@ -162,33 +162,40 @@
             "sure-delete-assign": "Are you sure to unassign service package to customer?"
         }
     },
-    "manage-schedule":{
+    "manage-schedule": {
         "title": "Manage doctor's examination plan",
-        "choose-doctor":"Choose Doctor",
-        "choose-date":"Choose Date",
-        "save":"Save infor"
+        "choose-doctor": "Choose Doctor",
+        "choose-date": "Choose Date",
+        "save": "Save infor"
     },
-    "patient":{
-        "detail-doctor":{
-            "schedule":"Schedule",
-            "no-schedule": "Doctor dont have appointment",
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "Doctor don't have appointment",
             "choose": "Choose",
-            "book-free":"book (free)"
+            "book-free": "book (free)"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Clinic address",
+            "price": "Price",
+            "detail": "See details",
+            "payment": "The patient can pay the cost in the form of:",
+            "hide-price": "Hide details"
         }
     },
-    "admin" : {
-        "manage-doctor":{
+    "admin": {
+        "manage-doctor": {
             "title": "add infor doctor",
-            "select-doctor":"Choose doctor",
-            "intro":"doctor information",
-            "add":"Create information",
-            "save":"Save Information",
+            "select-doctor": "Choose doctor",
+            "intro": "doctor information",
+            "add": "Create information",
+            "save": "Save Information",
             "price": "Price",
             "payment": "Payment",
             "province": "Province",
             "nameClinic": "Clinic's name",
             "addressClinic": "Clinic's address",
-            "note":"Note"
+            "note": "Note"
         }
     }
 }

@@ -11,14 +11,14 @@ const getAllUser = (inputId) => {
 
 const createNewUserService = (data) => {
     console.log('check data from service :', data)
-    return axios.post('/api/signup', data )
+    return axios.post('/api/signup', data)
 }
 
 const deleteUserService = (userId) => {
-    return axios.delete('/api/delete-user', {data: {id: userId}});
+    return axios.delete('/api/delete-user', { data: { id: userId } });
 }
 
-const editUserService = (inputData)=>{
+const editUserService = (inputData) => {
     return axios.put('/api/edit-user', inputData);
 }
 const getAllCodeService = (inputType) => {
@@ -31,23 +31,30 @@ const getAllDoctors = () => {
     return axios.get(`/api/get-all-doctors`);
 }
 const saveDetailDoctorService = (data) => {
-    return axios.post('/api/save-infor-doctors', data )
+    return axios.post('/api/save-infor-doctors', data)
 }
 
 const getDetailInforDoctor = (inputId) => {
     return axios.get(`/api/get-detail-doctor-by-id?id=${inputId}`)
 }
 
-const saveBulkScheduleDoctor = (data) =>{
-    return axios.post('/api/bulk-create-schedule',data)
+const saveBulkScheduleDoctor = (data) => {
+    return axios.post('/api/bulk-create-schedule', data)
 }
 
 const getScheduleDoctorByDate = (doctorId, date) => {
     return axios.get(`/api/get-schedule-doctor-by-date?doctorId=${doctorId}&date=${date}`)
-}   
+}
 
-export { handleLoginApi, getAllUser, 
-    createNewUserService, deleteUserService ,
-    editUserService,getAllCodeService, getTopDoctorHomeService,getAllDoctors
-    ,saveDetailDoctorService,getDetailInforDoctor, saveBulkScheduleDoctor,
-    getScheduleDoctorByDate,};
+const getExtraInforDoctorById = (doctorId) => {
+    return axios.get(`/api/get-extra-infor-doctor-by-id?doctorId=${doctorId}`)
+
+}
+
+export {
+    handleLoginApi, getAllUser,
+    createNewUserService, deleteUserService,
+    editUserService, getAllCodeService, getTopDoctorHomeService, getAllDoctors
+    , saveDetailDoctorService, getDetailInforDoctor, saveBulkScheduleDoctor,
+    getScheduleDoctorByDate, getExtraInforDoctorById
+};
