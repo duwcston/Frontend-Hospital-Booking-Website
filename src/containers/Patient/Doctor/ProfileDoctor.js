@@ -5,7 +5,8 @@ import './ProfileDoctor.scss';
 import { getProfileDoctorById } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import { NumericFormat } from 'react-number-format';
-import { NonceProvider } from "react-select/dist/react-select.cjs.prod";
+import _ from 'lodash';
+import moment from "moment";
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -45,9 +46,32 @@ class ProfileDoctor extends Component {
         }
     }
 
+    renderTimeBooking = (dataTime) => {
+        let { language } = this.props;
+        let time = language === LANGUAGES.VI ? dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
+
+        if (dataTime && !_.isEmpty(dataTime)) {
+            let date = language === LANGUAGES.VI ?
+                moment.unix(+dataTime.date / 1000).format('dddd - DD/MM/YYYY')
+                :
+                moment.unix(+dataTime.date / 1000).locale('en').format('ddd - DD/MM/YYYY');
+            return (
+                <>
+                    <div>
+                        <div>{time} - {date}</div>
+                        <div>
+                            <FormattedMessage id="patient.booking-modal.priceBooking" />
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        return <></>
+    }
+
     render() {
-        let dataProfile = this.state.dataProfile;
-        let language = this.props.language;
+        let { dataProfile } = this.state;
+        let { language, isShowDescriptionDoctor, dataTime } = this.props;
         console.log('check data profile :', this.state)
 
         let nameEn = '', nameVi = '';
@@ -70,6 +94,21 @@ class ProfileDoctor extends Component {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className='down'>
+                            {isShowDescriptionDoctor === true ?
+                                <>
+                                    {dataProfile && dataProfile.Markdown
+                                        && dataProfile.Markdown.description
+                                        &&
+                                        <span>
+                                            {dataProfile.Markdown.description}
+                                        </span>
+                                    }
+                                </>
+                                :
+                                <>
+                                    {this.renderTimeBooking(dataTime)}
+                                </>
+                            }
                             {dataProfile && dataProfile.Markdown
                                 && dataProfile.Markdown.description
                                 &&
@@ -81,7 +120,7 @@ class ProfileDoctor extends Component {
                     </div>
                 </div>
                 <div className="price">
-                    Giá khám bệnh:
+                    <FormattedMessage id="patient.booking-modal.price" />
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI &&
                         <NumericFormat
                             className="currency"
@@ -89,7 +128,6 @@ class ProfileDoctor extends Component {
                             thousandSeparator
                             readOnly
                             suffix={'VND'} />
-
                     }
 
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.EN &&
@@ -99,7 +137,6 @@ class ProfileDoctor extends Component {
                             thousandSeparator
                             readOnly
                             prefix={'$'} />
-
                     }
                 </div>
             </div>

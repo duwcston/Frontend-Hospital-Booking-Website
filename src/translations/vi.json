@@ -1,65 +1,29 @@
 {
-    "homeheader":{
-        "speciality":"Medical specialty",
-        "searchdoctor":"Find a doctoer by speciality",
-        "health-facility":"Health facilities",
-        "select-room":"Choose hospital clinic",
-        "doctor":"Doctor",
-        "select-doctor":"Choose a good doctor",
-        "fee":"Checkup package",
-        "check-health":"General health check",
-        "support":"Support"
+    "homeheader": {
+        "speciality": "Medical specialty",
+        "searchdoctor": "Find a doctoer by speciality",
+        "health-facility": "Health facilities",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support"
     },
-    "banner":{
-        "title1":"MEDICAL PLATFORM",
-        "title2":"COMPRESENSIVE HEALTH CAR",
-        "child1":"Specialized examination",
-        "child2":"Romote examination",
-        "child3":"General examination",
-        "child4":"Medical test",
-        "child5":"Mental health",
-        "child6":"Dental examination"
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPRESENSIVE HEALTH CAR",
+        "child1": "Specialized examination",
+        "child2": "Romote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental examination"
     },
-    
-    "manage-user":{
-        "add": "Add a new user",
-        "email": "Email",
-        "password": "Password",
-        "first-name": "First name",
-        "last-name": "Last name",
-        "phone-number": "Phone number",
-        "address": "Address",
-        "gender": "Gender",
-        "position": "Position",
-        "role": "Role",
-        "save": "Save user",
-        "image": "Avatar",
-        "edit": "Edit user"
+    "homepage": {
+        "out-standing-doctor": "Last week's featured docotr",
+        "more-infor": "More infor"
     },
-    "homepage":{
-        "out-standing-doctor":"Last week's featured docotr",
-        "more-infor":"More infor"
-    },
-    "menu": {
-        
-        "admin": {
-            "manage-user": "User system",
-            "manage-doctor": "Manage doctors",
-            "manage-admin": "Manage admins",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
-            "clinic": "Clinics",
-            "manage-clinic": "Manage clinics",
-            "specialty": "Specialties",
-            "manage-specialty": "Manage specialties",
-            "handbook": "Handbook",
-            "manage-handbook": "Manage handbook"
-        },
-        "doctor":{
-            "manage-schedule":"Quản lý kế hoạch khám bệnh"
-        }
-    },
-
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
@@ -86,18 +50,37 @@
         "password": "Mật khẩu",
         "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
     },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "save": "Save user",
+        "image": "Avatar",
+        "edit": "Edit user"
+    },
     "menu": {
-        "system": {
-            "header": "Hệ thống",
-            "system-administrator": {
-                "header": "Quản trị hệ thống",
-                "user-manage": "Quản lý người sử dụng",
-                "product-manage": "Quản lý gói",
-                "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
-            },
-            "system-parameter": {
-                "header": "Tham số hệ thống"
-            }
+        "admin": {
+            "manage-user": "User system",
+            "manage-doctor": "Manage doctors",
+            "manage-admin": "Manage admins",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Clinics",
+            "manage-clinic": "Manage clinics",
+            "specialty": "Specialties",
+            "manage-specialty": "Manage specialties",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Quản lý kế hoạch khám bệnh"
         }
     },
     "system": {
@@ -178,39 +161,53 @@
             "sure-delete-assign": "Bạn có chắc chắn muốn bỏ gán gói dịch vụ cho khách hàng?"
         }
     },
-    "manage-schedule":{
+    "manage-schedule": {
         "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
-        "choose-doctor":"Chọn bác sĩ",
-        "choose-date":"Chọn ngày",
-        "save":"Lưu thông tin"
+        "choose-doctor": "Chọn bác sĩ",
+        "choose-date": "Chọn ngày",
+        "save": "Lưu thông tin"
     },
-    "patient":{
-        "detail-doctor":{
-            "schedule":"Lịch khám",
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Lịch khám",
             "no-schedule": "Bác sĩ không có lịch khám",
             "choose": "Chọn",
-            "book-free":"và đặt (miễn phí)"
+            "book-free": "và đặt (miễn phí)"
         },
-        "extra-infor-doctor":{
-            "text-address":"Địa chỉ khám",
-            "price":"Giá khám",
-            "detail":"Xem chi tiết",
-            "payment":"Người bệnh có thể thanh toán chi phí bằng hình thức:",
-            "hide-price":"Ẩn bảng giá"
+        "extra-infor-doctor": {
+            "text-address": "Địa chỉ khám",
+            "price": "Giá khám",
+            "detail": "Xem chi tiết",
+            "payment": "Người bệnh có thể thanh toán chi phí bằng hình thức:",
+            "hide-price": "Ẩn bảng giá"
+        },
+        "booking-modal": {
+            "title": "Thông tin đặt lịch khám",
+            "fullname": "Họ và tên",
+            "phoneNumber": "Số điện thoại",
+            "email": "Email",
+            "address": "Địa chỉ",
+            "reason": "Lý do khám",
+            "birthday": "Ngày sinh",
+            "gender": "Giới tính",
+            "btn-confirm": "Xác nhận",
+            "btn-cancel": "Hủy",
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Giá khám"
         }
     },
-    "admin" : {
-        "manage-doctor":{
+    "admin": {
+        "manage-doctor": {
             "title": "Tạo thêm thông tin bác sĩ",
-            "select-doctor":"Chọn bác sĩ",
-            "intro":"Thông tin giới thiệu",
-            "add":"Tạo thông tin",
-            "save":"Lưu thông tin",
+            "select-doctor": "Chọn bác sĩ",
+            "intro": "Thông tin giới thiệu",
+            "add": "Tạo thông tin",
+            "save": "Lưu thông tin",
             "payment": "Phương thức thanh toán",
             "province": "Tỉnh/ Thành Phố",
             "nameClinic": "Tên phòng khám",
             "addressClinic": "Địa chỉ phòng khám",
-            "note":"Ghi chú"
+            "note": "Ghi chú"
         }
     }
 }
