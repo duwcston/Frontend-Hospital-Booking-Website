@@ -1,7 +1,7 @@
 {
     "homeheader": {
         "speciality": "Medical specialty",
-        "searchdoctor": "Find a doctoer by speciality",
+        "searchdoctor": "Find a doctor by speciality",
         "health-facility": "Health facilities",
         "select-room": "Choose hospital clinic",
         "doctor": "Doctor",
@@ -21,8 +21,9 @@
         "child6": "Dental examination"
     },
     "homepage": {
-        "out-standing-doctor": "Last week's featured docotr",
-        "more-infor": "More infor"
+        "out-standing-doctor": "Last week's featured doctor",
+        "more-infor": "Xem thêm",
+        "specialty": "Chuyên khoa phổ biến"
     },
     "common": {
         "add": "Thêm",

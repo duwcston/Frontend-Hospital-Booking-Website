@@ -1,7 +1,8 @@
 .section-specialty {
     height: 330px;
     background: #f5f5f5;
-    border: 1px solid  red;
+    border: 1px solid red;
+
     .specialty-container {
         margin: 0 100px;
         display: flex;
@@ -17,7 +18,7 @@
                 font-weight: 600;
             }
 
-            .btn-section{
+            .btn-section {
                 float: right;
                 padding: 10px 15px;
                 border: none;
@@ -28,21 +29,21 @@
                 cursor: pointer;
                 text-transform: uppercase;
 
-                &:hover{
+                &:hover {
                     color: #fff;
                     background: #f7d800;
                 }
             }
         }
 
-        .specialty-body{
+        .specialty-body {
 
 
-            .specialty-customize{
-                .bg-image{
+            .specialty-customize {
+                .bg-image {
                     width: 278px;
                     height: 150px;
-                    background: url('../../../assets/specialty/doctor.png');
+                    background: url('../../../assets/outstanding-doctor/doctor.png');
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -56,18 +57,19 @@
                 //position: relative !important;
                 left: -10px !important;
                 z-index: 1000 !important;
-                height: 48px !important  ;
+                height: 48px !important;
                 width: 44px !important;
                 background: #fff !important;
 
-                &.hover{
+                &.hover {
                     background: #eceaea !important;
                 }
             }
+
             .slick-prev:before,
             .slick-next:before {
                 color: red !important;
-                
+
             }
 
             .slick-next {
@@ -77,16 +79,13 @@
                 height: 48px !important;
                 width: 44px !important;
                 background-color: #fff !important;
-                &.hover{
+
+                &.hover {
                     background: #eceaea !important;
                 }
             }
         }
 
-        
+
     }
 }
-
-
-
-
