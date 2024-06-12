@@ -41,6 +41,7 @@ class BookingModal extends Component {
         let result = [];
         let language = this.props.language;
         if (data && data.length > 0) {
+            // eslint-disable-next-line array-callback-return
             data.map(item => {
                 let object = {};
                 object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;

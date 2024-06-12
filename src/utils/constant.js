@@ -4,7 +4,8 @@ export const path = {
     LOG_OUT: '/logout',
     SYSTEM: '/system',
     HOMEPAGE: '/home',
-    DETAIL_DOCTOR: '/detail-doctor/:id'
+    DETAIL_DOCTOR: '/detail-doctor/:id',
+    VERIFY_EMAIL_BOOKING: '/verify-booking',
 };
 
 export const LANGUAGES = {
@@ -29,7 +30,7 @@ export const YesNoObj = {
 }
 
 export const USER_ROLES = {
-    ADMIN: 'R1',
+    ADMIN: '1',
     DOCTOR: 'R2',
     PATIENT: 'R3'
 }
