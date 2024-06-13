@@ -72,7 +72,7 @@
             "manage-user": "Hệ thống người dùng",
             "manage-doctor": "Quản lý bác sỹ",
             "manage-admin": "Quản lý",
-            "crud": "CRUD user",
+            "crud": "CRUD user", 
             "crud-redux": "CRUD Redux",
             "clinic": "Phòng Khám",
             "manage-clinic": "Quản lý phòng khám",
