@@ -202,7 +202,7 @@
         "manage-doctor": {
             "title": "add infor doctor",
             "select-doctor": "Choose doctor",
-            "intro": "doctor information",
+            "intro": "Doctor information",
             "add": "Create information",
             "save": "Save Information",
             "price": "Price",

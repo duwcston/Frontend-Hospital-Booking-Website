@@ -45,7 +45,7 @@ class Specialty extends Component {
                                 return (
                                     <div className='section-customize specialty-child' key={index}>
                                         <div className='bg-image section-specialty'
-                                            style={{ backgroundImage: `url(${item.image})` }}
+                                            style={{ backgroundImage: `url("${item.image}")` }}
                                         />
                                         <div className='specialty-name'> {item.name} </div>
                                     </div>

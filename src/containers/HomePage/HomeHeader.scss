@@ -73,8 +73,10 @@
                 &.active {
                     opacity: 1;
 
-                    span {
-                        color: blue;
+                    button {
+                        color: #49bce2;
+                        border: none;
+                        background-color: #fff;
                     }
                 }
 
@@ -91,8 +93,10 @@
                 &.active {
                     opacity: 1;
 
-                    span {
+                    button {
                         color: orange;
+                        border: none;
+                        background-color: #fff;
                     }
                 }
 
@@ -111,6 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url("../../assets/images/035ffa43-1e63-48f2-8297-90edae3e7160.jpg");
     display: flex;
     flex-direction: column;
 

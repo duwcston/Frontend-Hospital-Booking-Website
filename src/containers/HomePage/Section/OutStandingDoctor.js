@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import './OutStandingDoctor.scss'
 import { FormattedMessage } from 'react-intl';
 import {Buffer} from 'buffer';
-
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

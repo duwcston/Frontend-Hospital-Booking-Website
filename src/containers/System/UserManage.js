@@ -51,7 +51,7 @@ class UserManage extends Component {
     handleDeleteUser = async (user) => {
         try{
             let response = await deleteUserService(user.id);
-            if(response && response.errCode != 0){
+            if(response && response.errCode !== 0){
                 alert(response.errMessage);
             }else{
                 await this.getAllUserFromReact();
@@ -77,7 +77,7 @@ class UserManage extends Component {
     createNewUser = async (data) => {
         try{
             let response = await createNewUserService(data);
-            if(response && response.errCode !=0){
+            if(response && response.errCode !== 0){
                 alert(response.errMessage);
             }else{
                 await this.getAllUserFromReact();

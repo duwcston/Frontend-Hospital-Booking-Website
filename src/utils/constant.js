@@ -30,7 +30,7 @@ export const YesNoObj = {
 }
 
 export const USER_ROLES = {
-    ADMIN: 'R1',
+    ADMIN: '1',
     DOCTOR: 'R2',
     PATIENT: 'R3'
 }

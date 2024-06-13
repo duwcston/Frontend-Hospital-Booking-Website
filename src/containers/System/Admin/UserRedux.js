@@ -3,12 +3,10 @@ import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import './userRedux.css'
 import {Buffer} from 'buffer';
-
 import { LANGUAGES , CRUD_ACTIONS, CommonUtils} from "../../../utils";
 import * as actions from "../../../store/actions";
 import Lightbox from "react-image-lightbox";
 import 'react-image-lightbox/style.css';
-import { create } from "lodash";
 import TableManagerUser from "./TableManagerUser";
 class UserRedux extends Component {
 

@@ -1,7 +1,5 @@
-
-
 .manager-doctor-container{
-    padding: 5px solit red ;
+    padding: 5px solid red ;
     
     .manage-doctor-title{
         text-align: center;
@@ -31,7 +29,7 @@
         outline: none;
         border: none;
         padding: 5px;
-        background: blue;
+        background: #0071ba;
         cursor: pointer;
         color: white;
         &.hover{
