@@ -8,7 +8,9 @@
         "select-doctor":"Choose a good doctor",
         "fee":"Checkup package",
         "check-health":"General health check",
-        "support":"Support"
+        "support":"Support",
+        "welcome": "Welcome"
+
     },
     "banner":{
         "title1":"MEDICAL PLATFORM",
@@ -85,20 +87,6 @@
         "username": "Tên đăng nhập",
         "password": "Mật khẩu",
         "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
-    },
-    "menu": {
-        "system": {
-            "header": "Hệ thống",
-            "system-administrator": {
-                "header": "Quản trị hệ thống",
-                "user-manage": "Quản lý người sử dụng",
-                "product-manage": "Quản lý gói",
-                "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
-            },
-            "system-parameter": {
-                "header": "Tham số hệ thống"
-            }
-        }
     },
     "system": {
         "user-manage": {
