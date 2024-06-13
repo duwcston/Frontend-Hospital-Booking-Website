@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import './userRedux.css'
+import './userRedux.scss'
 import {Buffer} from 'buffer';
 import { LANGUAGES , CRUD_ACTIONS, CommonUtils} from "../../../utils";
 import * as actions from "../../../store/actions";

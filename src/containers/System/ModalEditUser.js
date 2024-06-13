@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import {Button, Modal, ModalHeader, ModalBody,ModalFooter} from 'reactstrap';
-import {emitter} from "../../utils/emitter";
+
 import _ from 'lodash';
 
 
@@ -79,7 +79,7 @@ class ModalEditUser extends Component {
                 className={"modal-user-container"}
                 size="lg"
                 >
-                    <ModalHeader toggle = {() => {this.toggle()}}>Edit  a new User</ModalHeader>
+                    <ModalHeader toggle = {() => {this.toggle()}}>Edit a new User</ModalHeader>
                     <ModalBody>
                         <div className="model-user-body">
                             <div className="input-container">
@@ -118,7 +118,7 @@ class ModalEditUser extends Component {
                             </div>
 
                             <div className="input-container">
-                                <label>address</label>
+                                <label>Address</label>
                                 <input
                                     type="text"
                                     onChange={(event) => {this.handleOnChangeInput(event, "address")}}

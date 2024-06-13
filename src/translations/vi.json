@@ -207,9 +207,12 @@
             "add": "Tạo thông tin",
             "save": "Lưu thông tin",
             "payment": "Phương thức thanh toán",
+            "payment-method": "Chọn phương thức thanh toán",
             "province": "Tỉnh/ Thành Phố",
             "nameClinic": "Tên phòng khám",
             "addressClinic": "Địa chỉ phòng khám",
+            "specialty": "Chọn chuyên khoa",
+            "clinic": "Chọn phòng khám",
             "note": "Ghi chú"
         }
     }

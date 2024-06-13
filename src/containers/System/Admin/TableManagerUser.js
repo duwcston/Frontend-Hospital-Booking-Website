@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import './TableManagerUser.css';
+import './TableManagerUser.scss';
 import * as actions from "../../../store/actions"
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';

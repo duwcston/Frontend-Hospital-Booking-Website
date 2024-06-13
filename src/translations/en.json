@@ -200,16 +200,19 @@
     },
     "admin": {
         "manage-doctor": {
-            "title": "add infor doctor",
+            "title": "Add Doctor's information",
             "select-doctor": "Choose doctor",
             "intro": "Doctor information",
             "add": "Create information",
             "save": "Save Information",
             "price": "Price",
             "payment": "Payment",
+            "payment-method": "Payment method",
             "province": "Province",
             "nameClinic": "Clinic's name",
             "addressClinic": "Clinic's address",
+            "specialty": "Specialty",
+            "clinic": "Clinic",
             "note": "Note"
         }
     }
