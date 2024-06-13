@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import './userRedux.css'
+import {Buffer} from 'buffer';
 
 import { LANGUAGES , CRUD_ACTIONS, CommonUtils} from "../../../utils";
 import * as actions from "../../../store/actions";
@@ -178,8 +179,8 @@ class UserRedux extends Component {
     handleEditUserFromParent = (user) => {
         let imageBase64 = '';
         if(user.image){
-            alert('hello');
-            //imageBase64 = new Buffer(user.image, 'base64').toString('binary');
+            //alert('hello');
+            imageBase64 =  Buffer.from(user.image, 'base64').toString('binary');
         }
         this.setState({
             email: user.email,

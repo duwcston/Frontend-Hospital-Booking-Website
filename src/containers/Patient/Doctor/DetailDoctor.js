@@ -67,12 +67,12 @@ class DetailDoctor extends Component {
                 <div className='doctor-detail-container'>
                     <div className='intro-doctor'>
                         <div
-                            className='content-left'
-                            style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}>
+                            className='content_left'
+                            style={{ backgroundImage: `url("${detailDoctor && detailDoctor.image ? detailDoctor.image : ''}")` }}>
                         </div>
 
 
-                        <div className='content-right'>
+                        <div className='content_right'>
                             <div className='up'>
                                 {language === LANGUAGES.VI ? nameVi : nameEn}
                             </div>

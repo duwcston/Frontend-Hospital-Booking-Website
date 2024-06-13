@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './OutStandingDoctor.scss'
 import { FormattedMessage } from 'react-intl';
+import {Buffer} from 'buffer';
 
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -57,7 +58,7 @@ class OutStandingDoctor extends Component {
                         && arrDoctors.map((item,index)=>{
                             let imageBase64 = '';
                             if(item.image){
-                                {/* imageBase64 = new Buffer(item.image, 'base64').toString('binary'); */}
+                                imageBase64 =  Buffer.from(item.image, 'base64').toString('binary');
                             }
                             let nameEn = `${item.positionData.valueEn}, ${item.lastName}  ${item.firstName}`;
                             let nameVi = `${item.positionData.valueVi}, ${item.lastName}  ${item.firstName}`;
