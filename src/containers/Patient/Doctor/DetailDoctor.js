@@ -87,7 +87,7 @@ class DetailDoctor extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 <div className='schedule-doctor'>
                     <div className="content-left">
                         <DoctorSchedule
@@ -107,7 +107,7 @@ class DetailDoctor extends Component {
                     }
                 </div>
                 <div className='comment-doctor'>
-
+                </div>
                 </div>
             </>
         );
