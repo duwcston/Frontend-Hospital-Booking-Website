@@ -2,20 +2,106 @@
 
 .header-container {
     z-index: 99;
-    display: flex;
     justify-content: space-between;
     background-color: $colormain;
     color: $common-text-color;
     height: 40px;
     position: relative;
+    width: 100%;
+    display: flex;
+
+    .header-tabs-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .header-tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 0 10px;
+            cursor: pointer;
+            font-size: $base-size + 1px;
+            font-weight: 500;
+            color: $common-text-color;
+
+            &:hover {
+                background-color: darken($colormain, 5);
+            }
+
+            &.active {
+                background-color: #fff;
+                color: $colormain;
+            }
+        }
+    }
+
+    .welcome {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-size: $base-size + 1px;
+        font-weight: 500;
+    }
+
+    .languages {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+
+        .language-vi {
+            cursor: pointer;
+            opacity: 0.2;
+
+            &.active {
+                opacity: 1;
+
+                button {
+                    color: orange;
+                    border: none;
+                    background-color: #0071ba;
+                }
+            }
+
+            &.hover {
+                opacity: 0.8;
+            }
+        }
+
+        .language-en {
+            margin: 0 10px;
+            cursor: pointer;
+            opacity: 0.2;
+
+            &.active {
+                opacity: 1;
+
+                button {
+                    color: orange;
+                    border: none;
+                    background-color: #0071ba;
+                }
+            }
+
+            &.hover {
+                opacity: 0.8;
+            }
+        }
+
+    }
+
     .btn-logout {
         color: $common-text-color;
         line-height: 40px;
         height: 40px;
         padding: 0 10px;
+
         &:hover {
             background-color: darken($colormain, 5);
         }
+
         i {
             font-size: $base-size + 1px;
         }
