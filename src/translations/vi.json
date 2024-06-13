@@ -1,28 +1,28 @@
 {
     "homeheader": {
-        "speciality": "Medical specialty",
-        "searchdoctor": "Find a doctor by speciality",
-        "health-facility": "Health facilities",
-        "select-room": "Choose hospital clinic",
-        "doctor": "Doctor",
-        "select-doctor": "Choose a good doctor",
-        "fee": "Checkup package",
-        "check-health": "General health check",
-        "support": "Support",
-        "welcome": "Welcome"
+        "speciality": "Chuyên Khoa",
+        "searchdoctor": "Tìm Bác Sỹ Theo Khoa",
+        "health-facility": "Cơ Sở Y Tế",
+        "select-room": "Chọn Phòng Khám",
+        "doctor": "Bác Sỹ",
+        "select-doctor": "Chọn Bác Sỹ",
+        "fee": "Thanh Toán",
+        "check-health": "Kiểm Tra Sức Khỏe Chung",
+        "support": "Hỗ Trợ",
+        "welcome": "Chào Mừng"
     },
     "banner": {
-        "title1": "MEDICAL PLATFORM",
-        "title2": "COMPRESENSIVE HEALTH CAR",
-        "child1": "Specialized examination",
-        "child2": "Romote examination",
-        "child3": "General examination",
-        "child4": "Medical test",
-        "child5": "Mental health",
-        "child6": "Dental examination"
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "child1": "Kiểm Tra Sức Khỏe Đặc Biệt",
+        "child2": "Kiểm Tra Sức Khỏe Online",
+        "child3": "Khám Sức Khỏe Tổng Quát",
+        "child4": "Xét Nghiệm",
+        "child5": "Sức Khỏe Tinh Thần",
+        "child6": "Nha Khoa"
     },
     "homepage": {
-        "out-standing-doctor": "Last week's featured doctor",
+        "out-standing-doctor": "Các Bác Sỹ Nổi Bật",
         "more-infor": "Xem thêm",
         "specialty": "Chuyên khoa phổ biến"
     },
@@ -53,33 +53,33 @@
         "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
     },
     "manage-user": {
-        "add": "Add a new user",
+        "add": "Thêm tài khoản",
         "email": "Email",
-        "password": "Password",
-        "first-name": "First name",
-        "last-name": "Last name",
-        "phone-number": "Phone number",
-        "address": "Address",
-        "gender": "Gender",
-        "position": "Position",
-        "role": "Role",
-        "save": "Save user",
-        "image": "Avatar",
-        "edit": "Edit user"
+        "password": "Mật khẩu",
+        "first-name": "Họ",
+        "last-name": "Tên",
+        "phone-number": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "position": "Vị trí",
+        "role": "Vai trò",
+        "save": "Lưu tài khoản",
+        "image": "Hình đại diện",
+        "edit": "Sửa tài khoản"
     },
     "menu": {
         "admin": {
-            "manage-user": "User system",
-            "manage-doctor": "Manage doctors",
-            "manage-admin": "Manage admins",
+            "manage-user": "Hệ thống người dùng",
+            "manage-doctor": "Quản lý bác sỹ",
+            "manage-admin": "Quản lý",
             "crud": "CRUD user",
             "crud-redux": "CRUD Redux",
-            "clinic": "Clinics",
-            "manage-clinic": "Manage clinics",
-            "specialty": "Specialties",
-            "manage-specialty": "Manage specialties",
-            "handbook": "Handbook",
-            "manage-handbook": "Manage handbook"
+            "clinic": "Phòng Khám",
+            "manage-clinic": "Quản lý phòng khám",
+            "specialty": "Chuyên khoa",
+            "manage-specialty": "Quản lý chuyên khoa",
+            "handbook": "Ghi chú",
+            "manage-handbook": "Quản lý ghi chú"
         },
         "doctor": {
             "manage-schedule": "Quản lý kế hoạch khám bệnh"
