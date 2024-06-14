@@ -183,9 +183,7 @@ class BookingModal extends Component {
                                 dataTime={dataTime}
                             />
                         </div>
-                        <div className="price">
-
-                        </div>
+                        {/* <div className="price"></div> */}
                         <div className="row">
                             <div className="col-6 form-group">
                                 <label>

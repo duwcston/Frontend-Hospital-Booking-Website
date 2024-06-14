@@ -37,14 +37,14 @@ class DetailDoctor extends Component {
 
 
     componentDidUpdate(prevPros, prevState, snapshot) {
-        // if(prevPros.allDoctorsRedux !== this.props.allDoctorsRedux){
-        //     let listDoctors =this.props.allDoctorsRedux;
-        //     console.log(listDoctors);
-        //     let dataSelect = this.buildDatainputSelect(listDoctors);
-        //     this.setState({
-        //         listDoctors: dataSelect
-        //     })
-        // }
+        if (prevPros.allDoctorsRedux !== this.props.allDoctorsRedux) {
+            let listDoctors = this.props.allDoctorsRedux;
+            console.log(listDoctors);
+            let dataSelect = this.buildDatainputSelect(listDoctors);
+            this.setState({
+                listDoctors: dataSelect
+            })
+        }
 
     }
 
@@ -55,8 +55,8 @@ class DetailDoctor extends Component {
         let { detailDoctor } = this.state;
         let nameVi = '', nameEn = '';
         if (detailDoctor && detailDoctor.positionData) {
-            nameVi = `${detailDoctor.positionData.valueVi},${detailDoctor.lastName},${detailDoctor.firstName}`;
-            nameEn = `${detailDoctor.positionData.valueEn},${detailDoctor.firstName},${detailDoctor.lastName}`;
+            nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
+            nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
 
         }
         return (
@@ -87,27 +87,27 @@ class DetailDoctor extends Component {
                             </div>
                         </div>
                     </div>
-                
-                <div className='schedule-doctor'>
-                    <div className="content-left">
-                        <DoctorSchedule
-                            doctorIdFromParent={this.state.currentDoctorId}
-                        />
-                    </div>
-                    <div className="content-right">
-                        <DoctorExtraInfor doctorIdFromParent={this.state.currentDoctorId} />
-                    </div>
-                </div>
-                <div className='detail-infor-doctor'>
-                    {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
-                        &&
-                        <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
 
+                    <div className='schedule-doctor'>
+                        <div className="content_left">
+                            <DoctorSchedule
+                                doctorIdFromParent={this.state.currentDoctorId}
+                            />
                         </div>
-                    }
-                </div>
-                <div className='comment-doctor'>
-                </div>
+                        <div className="content_right">
+                            <DoctorExtraInfor doctorIdFromParent={this.state.currentDoctorId} />
+                        </div>
+                    </div>
+                    <div className='detail-infor-doctor'>
+                        {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
+                            &&
+                            <div dangerouslySetInnerHTML={{ __html: detailDoctor.Markdown.contentHTML }}>
+
+                            </div>
+                        }
+                    </div>
+                    <div className='comment-doctor'>
+                    </div>
                 </div>
             </>
         );

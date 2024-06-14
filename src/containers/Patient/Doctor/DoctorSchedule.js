@@ -61,15 +61,15 @@ class DoctorSchedule extends Component {
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
             allDays.push(object);
         }
-        // this.setState({
-        //     allDays: allDays,
-        // })
+        this.setState({
+            allDays: allDays,
+        })
         return allDays;
     }
 
     async componentDidUpdate(prevPros, prevState, snapshot) {
         if (this.props.language !== prevPros.language) {
-            let allDays = this.setArrDays(this.props.language);
+            let allDays = this.getArrDays(this.props.language);
             this.setState({
                 allDays: allDays
             })
@@ -163,7 +163,8 @@ class DoctorSchedule extends Component {
                                     <div className="book-free">
                                         <span>
                                             <FormattedMessage id="patient.detail-doctor.choose" />
-                                            <i class="far fa-hand-point-up"></i>
+                                            <> </>
+                                            {/* <i class="far fa-hand-point-up"></i> */}
                                             <FormattedMessage id="patient.detail-doctor.book-free" />
                                         </span>
                                     </div>

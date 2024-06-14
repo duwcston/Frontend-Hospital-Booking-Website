@@ -59,7 +59,7 @@ class DoctorExtraInfor extends Component {
                 <div className="content-down">
                     {isShowDetailInfor === false &&
                         <div className="short-infor">
-                            <FormattedMessage id="patient.extra-infor-doctor.price" />
+                            <FormattedMessage id="patient.extra-infor-doctor.price" /><br></br>
                             {extraInfor && extraInfor.priceTypeData && language === LANGUAGES.VI &&
                                 <NumericFormat
                                     className="currency"
@@ -75,7 +75,6 @@ class DoctorExtraInfor extends Component {
                                     thousandSeparator=","
                                     prefix={'$'} />
                             }
-
                             <span className="detail" onClick={() => this.showHideDetailInfor(true)}>
                                 <FormattedMessage id="patient.extra-infor-doctor.detail" />
                             </span>
