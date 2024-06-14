@@ -15,7 +15,6 @@ class ProfileDoctor extends Component {
             dataProfile: {}
         }
     }
-
     async componentDidMount() {
         let data = await this.getInforDoctor(this.props.doctorId);
         this.setState({
@@ -109,13 +108,13 @@ class ProfileDoctor extends Component {
                                     {this.renderTimeBooking(dataTime)}
                                 </>
                             }
-                            {dataProfile && dataProfile.Markdown
+                            {/* {dataProfile && dataProfile.Markdown
                                 && dataProfile.Markdown.description
                                 &&
                                 <span>
                                     {dataProfile.Markdown.description}
                                 </span>
-                            }
+                            } */}
                         </div>
                     </div>
                 </div>
