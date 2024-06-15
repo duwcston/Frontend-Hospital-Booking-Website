@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { FormattedMessage, FormattedTime } from 'react-intl';
-
 import CustomScrollBar from '../components/CustomScrollbars';
-
 import './CustomToast.scss';
 
 class CustomToast extends Component {
@@ -48,7 +46,7 @@ export class CustomToastCloseButton extends Component {
 
     render() {
         return (
-            <button type="button" className="toast-close" onClick={this.props.closeToast}>
+            <button type="button" className="toast-close">
                 <i className="fa fa-fw fa-times-circle" />
             </button>
         );

@@ -1,7 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
 import CustomToast from "../components/CustomToast";
 
 const TYPE_SUCCESS = 'SUCCESS';
@@ -56,18 +55,20 @@ class ToastUtil {
             }
         }
         toast.error(<CustomToast titleId={title} message={message} messageId={messageId} time={new Date()} />, {
-            position: toast.POSITION.BOTTOM_RIGHT,
+            position: toast.POSITION.TOP_RIGHT,
             pauseOnHover: true,
-            autoClose: autoCloseDelay
+            autoClose: autoCloseDelay,
+            closeOnClick: true,
         });
     }
 
     static show(type, title, message, rawMessage = false, autoCloseDelay = 3000) {
         const content = <CustomToast titleId={title} messageId={rawMessage ? null : message} message={rawMessage ? message : null} time={new Date()} />;
         const options = {
-            position: toast.POSITION.BOTTOM_RIGHT,
+            position: toast.POSITION.TOP_RIGHT,
             pauseOnHover: true,
-            autoClose: autoCloseDelay
+            autoClose: autoCloseDelay,
+            closeOnClick: true,
         };
 
         switch (type) {
