@@ -7,6 +7,7 @@ import { LANGUAGES } from '../../../utils';
 import { NumericFormat } from 'react-number-format';
 import _ from 'lodash';
 import moment from "moment";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -70,8 +71,9 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state;
-        let { language, isShowDescriptionDoctor, dataTime } = this.props;
-        console.log('check data profile :', this.state)
+        let { language, isShowDescriptionDoctor, dataTime,
+             isShowPrice, isShowLinkDetail, doctorId } = this.props;
+        console.log('check data profile :', this.state.dataProfile.image)
 
         let nameEn = '', nameVi = '';
         if (dataProfile && dataProfile.positionData) {
@@ -84,7 +86,7 @@ class ProfileDoctor extends Component {
                 <div className='intro-doctor'>
                     <div
                         className='content-left'
-                        style={{ backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ''})` }}>
+                        style={{ backgroundImage: `url("${dataProfile && dataProfile.image ? dataProfile.image : ''}")` }}>
                     </div>
 
 
@@ -118,6 +120,13 @@ class ProfileDoctor extends Component {
                         </div>
                     </div>
                 </div>
+                {isShowLinkDetail === true &&
+                        <div className="view-detail-doctor">
+                            <Link to={`/detail-doctor/${doctorId}`}>View more</Link>
+                        </div>
+                }
+
+                {isShowPrice === true &&
                 <div className="price">
                     <FormattedMessage id="patient.booking-modal.price" />
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI &&
@@ -138,6 +147,7 @@ class ProfileDoctor extends Component {
                             prefix={'$'} />
                     }
                 </div>
+                }
             </div>
         )
     }
