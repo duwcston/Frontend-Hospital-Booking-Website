@@ -1,16 +1,16 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { FormattedMessage } from "react-intl";
-import "./DetailSpecialty.scss";
+import "./DetailClinic.scss";
 import HomeHeader from '../../HomePage/HomeHeader'
 import DoctorSchedule from '../Doctor/DoctorSchedule';
 import DoctorExtraInfor from '../Doctor/DoctorExtraInfor';
 import ProfileDoctor from "../Doctor/ProfileDoctor";
-import { getAllDetailSpecialtyById, getAllCodeService } from "../../../services/userService";
+import { getAllDetailClinicById, getAllCodeService } from "../../../services/userService";
 import _ from "lodash";
 import { LANGUAGES } from "../../../utils";
 
-class DetailSpecialty extends Component {
+class DetailClinic extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,8 +19,7 @@ class DetailSpecialty extends Component {
             // Delete the code below after finish Medical Facility
             arrDoctorId: [],
 
-            dataDetailSpecialty: {},
-            listProvince: [],
+            dataDetailClinic: {},
         }
     }
 
@@ -28,17 +27,17 @@ class DetailSpecialty extends Component {
         if (this.props.match && this.props.match.params && this.props.match.params.id) {
             let id = this.props.match.params.id;
 
-            let res = await getAllDetailSpecialtyById({
+            let res = await getAllDetailClinicById({
                 id: id,
                 location: 'ALL'
             })
 
-            let resProvince = await getAllCodeService('PROVINCE');
-            if (res && res.errCode === 0 && resProvince && resProvince.errCode === 0) {
+            
+            if (res && res.errCode === 0 ) {
                 let data = res.data;
                 let arrDoctorId = [];
                 if (data && !_.isEmpty(res.data)) {
-                    let arr = data.doctorSpecialty;
+                    let arr = data.doctorClinic;
                     if (arr && arr.length > 0) {
                         arr.map(item => {
                             arrDoctorId.push(item.doctorId);
@@ -47,21 +46,10 @@ class DetailSpecialty extends Component {
                     }
                 }
 
-                let dataProvince = resProvince.data;
-                if(dataProvince && dataProvince.length > 0){
-                    dataProvince.unshift({
-                        creaedAt: null,
-                        keyMap: "ALL",
-                        type: "PROVINCE",
-                        valueEn: "ALL",
-                        valueVi: "Toan Quoc",
-                    })
-                }
-                
+               
                 this.setState({
-                    dataDetailSpecialty: res.data,
+                    dataDetailClinic: res.data,
                     arrDoctorId: arrDoctorId,
-                    listProvince: dataProvince ? dataProvince : []
                 })
             }
         }
@@ -80,7 +68,7 @@ class DetailSpecialty extends Component {
             let id = this.props.match.params.id;
             let location = event.target.value;
 
-            let res = await getAllDetailSpecialtyById({
+            let res = await getAllDetailClinicById({
                id: id,
                location:location
             })
@@ -89,7 +77,7 @@ class DetailSpecialty extends Component {
                 let data = res.data;
                 let arrDoctorId = [];
                 if(data && !_.isEmpty(res.data)){
-                    let arr = data.doctorSpecialty;
+                    let arr = data.doctorClinic;
                     if(arr && arr.length > 0){
                         arr.map(item => {
                             arrDoctorId.push(item.doctorId)
@@ -97,7 +85,7 @@ class DetailSpecialty extends Component {
                     }
                 }
                 this.setState({
-                    dataDetailSpecialty: res.data,
+                    dataDetailClinic: res.data,
                     arrDoctorId: arrDoctorId,
                 })
             }
@@ -106,22 +94,25 @@ class DetailSpecialty extends Component {
     }
 
     render() {
-        let { arrDoctorId, dataDetailSpecialty, listProvince } = this.state;
+        let { arrDoctorId, dataDetailClinic } = this.state;
         let { language } = this.props;
-        console.log('DetailSpecialty', this.state);
+        console.log('DetailClinic', this.state);
 
         return (
             <div className="detail-specialty-container">
                 <HomeHeader />
                 <div className="detail-specialty-body">
                     <div className="description-specialty">
-                        {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty) &&
-                            <div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.descriptionHTML }}>
+                        {dataDetailClinic && !_.isEmpty(dataDetailClinic) &&
+                            <>
+                                <div>{dataDetailClinic.name}</div>
+                                <div dangerouslySetInnerHTML={{ __html: dataDetailClinic.descriptionHTML }}>
 
-                            </div>
+                                </div>
+                            </>
                         }
                     </div>
-                    <div className="search-sp-doctor">
+                    {/* <div className="search-sp-doctor">
                         <select onChange={(event) => this.handleOnChangeSelect(event)}>
                             {listProvince && listProvince.length > 0 &&
                                 listProvince.map((item, index) => {
@@ -133,7 +124,7 @@ class DetailSpecialty extends Component {
                                 })
                             }
                         </select>
-                    </div>
+                    </div> */}
                     {arrDoctorId && arrDoctorId.length > 0 &&
                         arrDoctorId.map((item, index) => {
                             return (
@@ -181,4 +172,4 @@ const mapDispatchToProps = dispatch => {
     return {
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(DetailSpecialty);
+export default connect(mapStateToProps, mapDispatchToProps)(DetailClinic);
