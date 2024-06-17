@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-//import './MedicalFacility.scss'
+import './MedicalFacility.scss'
 import { FormattedMessage } from 'react-intl';
-
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { getAllClinic } from '../../../services/userService';
 import { withRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
@@ -40,8 +38,12 @@ class MedicalFacility extends Component {
             <div className='section-share section-medical-facility'>
                 <div className="section-container">
                     <div className='section-header'>
-                        <span className='title-section'>Medical Facility</span>
-                        <button className='btn-section'> more </button>
+                        <span className='title-section'>
+                            <FormattedMessage id='homepage.medical-facility' />
+                        </span>
+                        <button className='btn-section'> 
+                            <FormattedMessage id='homepage.more-infor' />
+                        </button>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>

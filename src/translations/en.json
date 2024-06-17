@@ -24,7 +24,9 @@
     "homepage": {
         "out-standing-doctor": "Last week's featured doctor",
         "more-infor": "More infor",
-        "specialty": "Popular Specialties"
+        "specialty": "Popular Specialties",
+        "medical-facility": "Medical facilities",
+        "handbook": "Handbook"
     },
     "common": {
         "add": "Add",

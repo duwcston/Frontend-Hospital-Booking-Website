@@ -24,7 +24,9 @@
     "homepage": {
         "out-standing-doctor": "Các Bác Sỹ Nổi Bật",
         "more-infor": "Xem thêm",
-        "specialty": "Chuyên khoa phổ biến"
+        "specialty": "Chuyên khoa phổ biến",
+        "medical-facility": "Cơ sở y tế phổ biến",
+        "handbook": "Cẩm nang"
     },
     "common": {
         "add": "Thêm",
