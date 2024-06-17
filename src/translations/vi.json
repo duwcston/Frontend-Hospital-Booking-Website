@@ -72,7 +72,7 @@
             "manage-user": "Hệ thống người dùng",
             "manage-doctor": "Quản lý bác sỹ",
             "manage-admin": "Quản lý",
-            "crud": "CRUD user", 
+            "crud": "CRUD user",
             "crud-redux": "CRUD Redux",
             "clinic": "Phòng Khám",
             "manage-clinic": "Quản lý phòng khám",
@@ -82,7 +82,8 @@
             "manage-handbook": "Quản lý ghi chú"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "manage-patient": "Quản lý bệnh nhân khám bệnh"
         }
     },
     "system": {
@@ -168,6 +169,24 @@
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn ngày",
         "save": "Lưu thông tin"
+    },
+    "manage-patient": {
+        "title": "Quản lý bệnh nhân khám bệnh",
+        "choose-date": "Chọn ngày khám",
+        "booking-time": "Thời gian đặt lịch khám",
+        "name": "Họ và tên",
+        "address":"Địa chỉ",
+        "gender":"Giới tính",
+        "no-patient": "Không có bệnh nhân nào đăng ký khám trong ngày này",
+        "confirm": "Xác nhận",
+        "remedy": "Xuất hóa đơn" 
+    },
+    "send-remedy": {
+        "title": "Xuất hóa đơn khám bệnh",
+        "email": "Email bệnh nhân",
+        "file": "Chọn file đơn thuốc",
+        "send": "Gửi hóa đơn",
+        "cancel": "Hủy"
     },
     "patient": {
         "detail-doctor": {

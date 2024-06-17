@@ -74,37 +74,37 @@ class DatePicker extends Component {
         return str;
     }
 
-    // autoFormatonBlur = (value) => {
-    //     var input = value;
-    //     var values = input.split('/').map(function (v, i) {
-    //         return v.replace(/\D/g, '')
-    //     });
-    //     var output = '';
+    autoFormatonBlur = (value) => {
+        var input = value;
+        var values = input.split('/').map(function (v, i) {
+            return v.replace(/\D/g, '')
+        });
+        var output = '';
 
-    //     if (values.length == 3) {
-    //         var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
-    //         var month = parseInt(values[0]) - 1;
-    //         var day = parseInt(values[1]);
-    //         var d = new Date(year, month, day);
-    //         if (!isNaN(d)) {
-    //             //document.getElementById('result').innerText = d.toString();
-    //             var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
-    //             output = dates.map(function (v) {
-    //                 v = v.toString();
-    //                 return v.length == 1 ? '0' + v : v;
-    //             }).join(' / ');
-    //         };
-    //     };
-    //     // this.value = output;
-    //     return output;
-    // }
+        if (values.length === 3) {
+            var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+            var month = parseInt(values[0]) - 1;
+            var day = parseInt(values[1]);
+            var d = new Date(year, month, day);
+            if (!isNaN(d)) {
+                document.getElementById('result').innerText = d.toString();
+                var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+                output = dates.map(function (v) {
+                    v = v.toString();
+                    return v.length === 1 ? '0' + v : v;
+                }).join(' / ');
+            };
+        };
+        this.value = output;
+        return output;
+    }
 
     autoFormatOnChange = (value, seperator) => {
         var input = value;
 
         let regexForDeleting = new RegExp(`\\D\\${seperator}$`);
 
-        //if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3); // dat.nt: Xóa thêm 1 ký tự nếu xóa dấu cách sau / (VD: 12 / 12 /=> 12 / 1)
+        if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3); // dat.nt: Xóa thêm 1 ký tự nếu xóa dấu cách sau / (VD: 12 / 12 /=> 12 / 1)
 
         if (regexForDeleting.test(input)) input = input.substr(0, input.length - 3);
 

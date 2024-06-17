@@ -14,9 +14,6 @@ class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // arrDoctorId: [],
-
-            // Delete the code below after finish Medical Facility
             arrDoctorId: [],
 
             dataDetailSpecialty: {},
@@ -93,6 +90,7 @@ class DetailSpecialty extends Component {
                     if(arr && arr.length > 0){
                         arr.map(item => {
                             arrDoctorId.push(item.doctorId)
+                            return item;
                         })
                     }
                 }

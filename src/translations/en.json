@@ -82,7 +82,8 @@
             "manage-handbook": "Manage handbook"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's schedule"
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's patient"
         }
     },
     "system": {
@@ -168,6 +169,24 @@
         "choose-doctor": "Choose Doctor",
         "choose-date": "Choose Date",
         "save": "Save infor"
+    },
+    "manage-patient": {
+        "title": "Manage patient's information",
+        "choose-date": "Choose Date",
+        "booking-time": "Booking time",
+        "name": "Fullname",
+        "address": "Address",
+        "gender": "Gender",
+        "no-patient": "No patient booking today",
+        "confirm": "Confirm",
+        "remedy": "Export remedy" 
+    },
+    "send-remedy": {
+        "title": "Send remedy",
+        "email": "Patient's email",
+        "file": "File",
+        "send": "Send",
+        "cancel": "Cancel"
     },
     "patient": {
         "detail-doctor": {

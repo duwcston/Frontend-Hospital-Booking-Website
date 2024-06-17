@@ -8,7 +8,7 @@ import DoctorExtraInfor from '../Doctor/DoctorExtraInfor';
 import ProfileDoctor from "../Doctor/ProfileDoctor";
 import { getAllDetailClinicById, getAllCodeService } from "../../../services/userService";
 import _ from "lodash";
-import { LANGUAGES } from "../../../utils";
+
 
 class DetailClinic extends Component {
     constructor(props) {
@@ -81,6 +81,7 @@ class DetailClinic extends Component {
                     if(arr && arr.length > 0){
                         arr.map(item => {
                             arrDoctorId.push(item.doctorId)
+                            return item;
                         })
                     }
                 }
