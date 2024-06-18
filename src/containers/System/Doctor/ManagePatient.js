@@ -56,6 +56,7 @@ class ManagePatient extends Component {
     }
 
     handleBtnConfirm = (item) => {
+        console.log("remedy:", item)
         let data = {
             doctorId: item.doctorId,
             patientId: item.patientId,
@@ -104,8 +105,8 @@ class ManagePatient extends Component {
             this.setState({
                 isShowLoading: false
             })
-            toast.error('Send remedy failed')
-            console.log('send remedy error :', res)
+            toast.error('Send Remedy failed')
+            console.log('send Remedy error :', res)
         }
     }
 
@@ -140,21 +141,23 @@ class ManagePatient extends Component {
                                             <th><FormattedMessage id="manage-patient.booking-time" /></th>
                                             <th><FormattedMessage id="manage-patient.name" /></th>
                                             <th><FormattedMessage id="manage-patient.address" /></th>
-                                            <th><FormattedMessage id="manage-patient.gender" /></th>
+                                            {/* <th><FormattedMessage id="manage-patient.gender" /></th> */}
                                             <th>Actions</th>
                                         </tr>
                                         {dataPatient && dataPatient.length > 0 ? dataPatient.map((item, index) => {
-                                            let time = language === LANGUAGES.VI ? item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
-                                            let gender = language === LANGUAGES.VI ? item.patientData.genderData.valueVi : item.patientData.genderData.valueEn;
+                                            let time = language === LANGUAGES.VI ?
+                                                item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
+                                            // let gender = language === LANGUAGES.VI ?
+                                            //     item.patientData.genderData.valueVi : item.patientData.genderData.valueEn;
                                             return (
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
                                                     <td>{time}</td>
                                                     <td>{item.patientData.firstName}</td>
                                                     <td>{item.patientData.address}</td>
-                                                    <td>{gender}</td>
+                                                    {/* <td>{gender}</td> */}
                                                     <td>
-                                                        <button className="mp-btn-confirm" onClick={() => this.handleBtnConfirm()}>
+                                                        <button className="mp-btn-confirm" onClick={() => this.handleBtnConfirm(item)}>
                                                             <FormattedMessage id="manage-patient.confirm" />
                                                         </button>
                                                     </td>

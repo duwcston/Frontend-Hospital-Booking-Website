@@ -215,7 +215,8 @@
             "price": "Price",
             "detail": "See details",
             "payment": "The patient can pay the cost in the form of:",
-            "hide-price": "Hide details"
+            "hide-price": "Hide details",
+            "viewMore": "View more"
         },
         "booking-modal": {
             "title": "Booking information",

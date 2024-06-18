@@ -1,21 +1,37 @@
-.preview-img-container{
-    .label-upload{
+.user-redux-container {
+    .btn {
+        width: 80px;
+        min-width: none;
+        margin-bottom: 10px;
+    }
+}
+
+
+.preview-img-container {
+    display: flex;
+    flex-direction: wrap;
+
+    .label-upload {
         padding: 5px;
         border-radius: 3px;
         background: #ddd;
-        cursor: pointer;
+        text-align: center;
+        color: #333;
+        position: relative;
 
-        &:hover{
-            opacity: 0.9;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
         }
     }
 
-    .preview-image{
+    .preview-image {
         height: 50px;
         width: 100%;
         border: 1px solid #ddd;
         background: center center no-repeat;
         background-size: contain;
-        cursor: pointer;
+        // cursor: pointer;
     }
 }
