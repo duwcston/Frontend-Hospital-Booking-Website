@@ -14,28 +14,20 @@
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
-
-        button {
-            padding: 5px 15px;
-            border: 1px solid grey;
-        }
     }
 
     .btn-schedule {
+        padding: 2px 15px;
+        border: 1px solid grey;
+        justify-content: center;
+        align-items: center;
+
         &.active {
             background-color: orange;
         }
     }
 
     .btn-save-schedule {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
-        background-color: #007bff;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 600;
-        text-align: center;
-        
+        width: 100px;
     }
 }

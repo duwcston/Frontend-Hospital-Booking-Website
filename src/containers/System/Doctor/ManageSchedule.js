@@ -65,6 +65,7 @@ class ManageSchedule extends Component {
                 object.label = language === LANGUAGES.EN ? labelEn : labelVi;
                 object.value = item.id;
                 result.push(object);
+                return object;
             })
         }
         return result;

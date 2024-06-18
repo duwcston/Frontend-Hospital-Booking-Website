@@ -72,10 +72,10 @@
     "menu": {
         "admin": {
             "manage-user": "User system",
-            "manage-doctor": "Manage doctors",
-            "manage-admin": "Manage admins",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
+            "manage-doctor": "Manage Doctors",
+            "manage-admin": "Manage Admins",
+            "crud": "Manage Users",
+            "crud-redux": "Create new user",
             "clinic": "Clinics",
             "manage-clinic": "Manage clinics",
             "specialty": "Specialties",
@@ -181,7 +181,20 @@
         "gender": "Gender",
         "no-patient": "No patient booking today",
         "confirm": "Confirm",
-        "remedy": "Export remedy" 
+        "remedy": "Export remedy"
+    },
+    "manage-specialty": {
+        "title": "Manage specialty's information",
+        "name": "Specialty's name",
+        "image": "Specialty's image",
+        "save": "Save infor"
+    },
+    "manage-clinic": {
+        "title": "Manage clinic's information",
+        "name": "Clinic's name",
+        "address": "Clinic's address",
+        "image": "Clinic's image",
+        "save": "Save infor"
     },
     "send-remedy": {
         "title": "Send remedy",

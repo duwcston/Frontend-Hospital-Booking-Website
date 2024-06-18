@@ -3,7 +3,21 @@ import { FormattedMessage, FormattedTime } from 'react-intl';
 import CustomScrollBar from '../components/CustomScrollbars';
 import './CustomToast.scss';
 
+
+
 class CustomToast extends Component {
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         isOpenToast: false
+    //     }
+    // }
+    
+    // closeOnClick = () => {
+    //     this.setState({
+    //         isOpenToast: false
+    //     })
+    // }
 
     render() {
         const { titleId, message, messageId, time } = this.props;
@@ -46,7 +60,7 @@ export class CustomToastCloseButton extends Component {
 
     render() {
         return (
-            <button type="button" className="toast-close">
+            <button type="button" className="toast-close" onClick={this.closeOnClick}>
                 <i className="fa fa-fw fa-times-circle" />
             </button>
         );

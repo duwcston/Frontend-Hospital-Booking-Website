@@ -74,8 +74,8 @@
             "manage-user": "Hệ thống người dùng",
             "manage-doctor": "Quản lý bác sỹ",
             "manage-admin": "Quản lý",
-            "crud": "CRUD user",
-            "crud-redux": "CRUD Redux",
+            "crud": "Quản lý người dùng",
+            "crud-redux": "Tạo người dùng",
             "clinic": "Phòng Khám",
             "manage-clinic": "Quản lý phòng khám",
             "specialty": "Chuyên khoa",
@@ -177,11 +177,24 @@
         "choose-date": "Chọn ngày khám",
         "booking-time": "Thời gian đặt lịch khám",
         "name": "Họ và tên",
-        "address":"Địa chỉ",
-        "gender":"Giới tính",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
         "no-patient": "Không có bệnh nhân nào đăng ký khám trong ngày này",
         "confirm": "Xác nhận",
-        "remedy": "Xuất hóa đơn" 
+        "remedy": "Xuất hóa đơn"
+    },
+    "manage-specialty": {
+        "title": "Quản lý chuyên khoa",
+        "name": "Tên chuyên khoa",
+        "image": "Hình ảnh chuyên khoa",
+        "save": "Lưu thông tin"
+    },
+    "manage-clinic": {
+        "title": "Quản lý phòng khám",
+        "name": "Tên phòng khám",
+        "address": "Địa chỉ phòng khám",
+        "image": "Hình ảnh phòng khám",
+        "save": "Lưu thông tin"
     },
     "send-remedy": {
         "title": "Xuất hóa đơn khám bệnh",

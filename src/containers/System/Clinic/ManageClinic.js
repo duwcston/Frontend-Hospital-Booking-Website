@@ -79,23 +79,23 @@ class ManageClinic extends Component {
     render() {
 
         return (
-            <div className="manage-Clinic-container">
-                <div className="ms-title">Quản lý phòng khám</div>
-                <div className="add-new-Clinic row">
+            <div className="manage-clinic-container">
+                <div className="ms-title"><FormattedMessage id="manage-clinic.title" /></div>
+                <div className="add-new-clinic row">
                     <div className="col-6 form-group">
-                        <label htmlFor="name">Tên phòng khám</label>
-                        <input type="text" className="form-control" id="name" value ={this.state.name}
-                        onChange={(event) => this.handleOnChangeInput(event, 'name')} />
+                        <label htmlFor="name"><FormattedMessage id="manage-clinic.name" /></label>
+                        <input type="text" className="form-control" id="name" value={this.state.name}
+                            onChange={(event) => this.handleOnChangeInput(event, 'name')} />
                     </div>
                     <div className="col-6 form-group">
-                        <label htmlFor="image">Ảnh chuyên khoa</label>
-                        <input type="file" className="form-control-file" id="image" 
-                        onChange={(event) => this.handleOnchangeImage(event)} />
+                        <label htmlFor="image"><FormattedMessage id="manage-clinic.image" /></label>
+                        <input type="file" className="form-control-file" id="image"
+                            onChange={(event) => this.handleOnchangeImage(event)} />
                     </div>
                     <div className="col-6 form-group">
-                        <label htmlFor="name">Địa chỉ phòng khám</label>
-                        <input type="text" className="form-control" id="address" value ={this.state.address}
-                        onChange={(event) => this.handleOnChangeInput(event, 'address')} />
+                        <label htmlFor="name"><FormattedMessage id="manage-clinic.address" /></label>
+                        <input type="text" className="form-control" id="address" value={this.state.address}
+                            onChange={(event) => this.handleOnChangeInput(event, 'address')} />
                     </div>
                     <div className="col-12">
                         <MdEditor
@@ -106,8 +106,10 @@ class ManageClinic extends Component {
                         />
                     </div>
                     <div className="col-12">
-                        <button className="btn-save-Clinic" 
-                        onClick={() => this.handleSaveNewClinic()}>Lưu</button>
+                        <button className="btn-save-clinic"
+                            onClick={() => this.handleSaveNewClinic()}>
+                            <FormattedMessage id="manage-clinic.save" />
+                        </button>
                     </div>
                 </div>
             </div>
