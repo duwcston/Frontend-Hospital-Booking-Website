@@ -2,7 +2,7 @@
 
 .toast-container {
   position: fixed;
-  z-index: 9999;
+  z-index: 99999999999;
   width: 150px;
   right: 0;
   top: 0;
@@ -62,6 +62,7 @@
         .fixed-scroll-bar {
           height: 50px;
         }
+
         .date {
           float: right;
           font-size: $base-size - 2px;

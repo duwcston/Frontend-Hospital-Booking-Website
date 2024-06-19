@@ -23,7 +23,7 @@ class RemedyModal extends Component {
 
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.language !== prevProps.language) {
+        if (this.props.dataModal !== prevProps.dataModal) {
             this.setState({
                 email: this.props.dataModal.email,
             })
@@ -31,9 +31,8 @@ class RemedyModal extends Component {
     }
 
     handleOnchangeEmail = (event) => {
-        let email = event.target.value;
         this.setState({
-            email: email
+            email: event.target.value
         })
     }
 
@@ -82,7 +81,7 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={() => sendRemedy()}><FormattedMessage id="send-remedy.send" /></Button>{''}
+                    <Button color="primary" onClick={() => this.handleSendRemedy()}><FormattedMessage id="send-remedy.send" /></Button>{''}
                     <Button color="secondary" onClick={closeRemedyModal}><FormattedMessage id="send-remedy.cancel" /></Button>
                 </ModalFooter>
             </Modal>

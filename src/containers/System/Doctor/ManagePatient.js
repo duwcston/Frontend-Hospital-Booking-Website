@@ -8,7 +8,7 @@ import moment from "moment";
 import { LANGUAGES } from "../../../utils";
 import RemedyModal from "./RemedyModal";
 import { toast } from "react-toastify";
-import LoadingOverlay from "react-loading-overlay";
+// import LoadingOverlay from "react-loading-overlay";
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class ManagePatient extends Component {
             dataPatient: [],
             isOpenRemedyModal: false,
             dataModal: {},
-            isShowLoading: false
+            // isShowLoading: false
         }
     }
 
@@ -79,10 +79,11 @@ class ManagePatient extends Component {
     }
 
     sendRemedy = async (dataChild) => {
+        console.log('Check remedy modal: ', dataChild)
         let { dataModal } = this.state
-        this.setState({
-            isShowLoading: true
-        })
+        // this.setState({
+        //     isShowLoading: true
+        // })
 
         let res = await postSendRemedy({
             email: dataChild.email,
@@ -95,16 +96,16 @@ class ManagePatient extends Component {
         });
 
         if (res && res.errCode === 0) {
-            this.setState({
-                isShowLoading: false
-            })
+            // this.setState({
+            //     isShowLoading: false
+            // })
             toast.success('Send remedy success')
             this.closeRemedyModal();
             await this.getDataPatient();
         } else {
-            this.setState({
-                isShowLoading: false
-            })
+            // this.setState({
+            //     isShowLoading: false
+            // })
             toast.error('Send Remedy failed')
             console.log('send Remedy error :', res)
         }
@@ -115,11 +116,11 @@ class ManagePatient extends Component {
         let { language } = this.props;
         return (
             <>
-                <LoadingOverlay
+                {/* <LoadingOverlay
                     active={this.state.isShowLoading}
                     spinner
                     text='Loading...'
-                >
+                > */}
                     <div className="manage-patient-container">
                         <div className="m-p-title">
                             <FormattedMessage id="manage-patient.title" />
@@ -157,14 +158,16 @@ class ManagePatient extends Component {
                                                     <td>{item.patientData.address}</td>
                                                     {/* <td>{gender}</td> */}
                                                     <td>
-                                                        <button className="mp-btn-confirm" onClick={() => this.handleBtnConfirm(item)}>
+                                                        <button className="mp-btn-confirm"
+                                                            onClick={() => this.handleBtnConfirm(item)}>
                                                             <FormattedMessage id="manage-patient.confirm" />
                                                         </button>
                                                     </td>
                                                 </tr>
                                             )
                                         })
-                                            : <tr>
+                                            :
+                                            <tr>
                                                 <td colSpan="6" style={{ textAlign: "center" }}>
                                                     <FormattedMessage id="manage-patient.no-patient" />
                                                 </td>
@@ -176,12 +179,12 @@ class ManagePatient extends Component {
                         </div>
                     </div>
                     <RemedyModal
-                        isOpen={isOpenRemedyModal}
+                        isOpenModal={isOpenRemedyModal}
                         dataModal={dataModal}
                         closeRemedyModal={this.closeRemedyModal}
                         sendRemedy={this.sendRemedy}
                     />
-                </LoadingOverlay>
+                {/* </LoadingOverlay> */}
             </>
         )
     }
